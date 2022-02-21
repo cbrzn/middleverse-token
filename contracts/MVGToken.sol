@@ -2,7 +2,7 @@
 pragma solidity ^0.8.2;
 
 import "./ERC20.sol";
-import "./extensions/ERC20Votes.sol";
+import "./extentions/ERC20Votes.sol";
 import "./utils/Ownable.sol";
 
 contract MiddleverseGold is ERC20, ERC20Votes, Ownable {

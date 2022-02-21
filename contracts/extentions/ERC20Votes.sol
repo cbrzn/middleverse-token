@@ -264,4 +264,8 @@ abstract contract ERC20Votes is ERC20Permit {
     function _subtract(uint256 a, uint256 b) private pure returns (uint256) {
         return a - b;
     }
+
+     function getChainId() external view returns (uint256) {
+        return block.chainid;
+    }
 }
