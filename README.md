@@ -1,10 +1,21 @@
-# Advanced Sample Hardhat Project
+# Middleverse ERC20 tokens 
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+Middleverse is a play and earn gaming site that would include the latest blockchain tokens including ERC20 and ERC721 tokens. The steps to achieve this gaming marvel is to begin with the ERC20 tokens that would eventually be an essential part to run the whole ecosystem of the game. Staking rewards, vesting and every other aspect of the game relies on the ERC20 fungible tokens.
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+In this project we have the following divisions: 
 
-Try running some of the following tasks:
+1. The ERC20 MVG Token
+2. Linear vesting of ERC20 tokens 
+
+The ERC20 MVG Token: 
+We have made a standard ERC20 token to deploy the MVG Tokens in a volume of 500 million. These tokens once generated have the functions that allow them to be minted and burnt as well. The owner of the tokens has these functionalities under his/her disposal
+
+
+Linear vesting of ERC20 tokens : 
+The ERC20 tokens are then linearly vested across multiple partners of the organisations. Mainly three of them include Advisors and partnerships that share similar vesting traits. Second would be ecosystems and marketing that again share characteristics of it being vested over a certain period.
+
+
+Try running some of the following tasks for the MVGToken project:
 
 ```shell
 npx hardhat accounts
@@ -12,31 +23,6 @@ npx hardhat compile
 npx hardhat clean
 npx hardhat test
 npx hardhat node
+node scripts/sample-script.js
 npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.js
-node scripts/deploy.js
-npx eslint '**/*.js'
-npx eslint '**/*.js' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
-
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/deploy.js
-```
-
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 ```
