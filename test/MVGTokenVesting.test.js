@@ -11,8 +11,8 @@ describe("TokenVesting", function () {
   let addrs;
 
   before(async function () {
-    Token = await ethers.getContractFactory("MyToken");
-    TokenVesting = await ethers.getContractFactory("MockTokenVesting");
+    Token = await ethers.getContractFactory("MiddleverseGold");
+    TokenVesting = await ethers.getContractFactory("MVGSetTime");
   });
   beforeEach(async function () {
     [owner, addr1, addr2, ...addrs] = await ethers.getSigners();

@@ -9,11 +9,11 @@ describe("Token Distribution with Vesting", function () {
     it("SeedSale : WhiteListed Account can buy Token with Vesting", async function () {
         const accounts = await ethers.getSigners();
 
-        const MVGToken = await ethers.getContractFactory("MVGToken");
+        const MVGToken = await ethers.getContractFactory("MiddleverseGold");
         const mvgToken = await MVGToken.connect(accounts[0]).deploy();
         await mvgToken.connect(accounts[0]).deployed();
 
-        const MVGDistribution = await ethers.getContractFactory("MDVDistribution");
+        const MVGDistribution = await ethers.getContractFactory("MVGDistribution");
         const mvgDistribution = await MVGDistribution.connect(accounts[1]).deploy(mvgToken.address, 1000);
         await mvgDistribution.connect(accounts[1]).deployed();
 
@@ -97,11 +97,11 @@ describe("Token Distribution with Vesting", function () {
     it("StrategicSale : WhiteListed Account can buy Token with Vesting", async function () {
         const accounts = await ethers.getSigners();
 
-        const MVGToken = await ethers.getContractFactory("MVGToken");
+        const MVGToken = await ethers.getContractFactory("MiddleverseGold");
         const mvgToken = await MVGToken.connect(accounts[0]).deploy();
         await mvgToken.connect(accounts[0]).deployed();
 
-        const MVGDistribution = await ethers.getContractFactory("MDVDistribution");
+        const MVGDistribution = await ethers.getContractFactory("MVGDistribution");
         const mvgDistribution = await MVGDistribution.connect(accounts[1]).deploy(mvgToken.address, 1000);
         await mvgDistribution.connect(accounts[1]).deployed();
 
@@ -187,11 +187,11 @@ describe("Token Distribution with Vesting", function () {
     it("PublicSale : WhiteListed Account can buy Token with Vesting", async function () {
         const accounts = await ethers.getSigners();
 
-        const MVGToken = await ethers.getContractFactory("MVGToken");
+        const MVGToken = await ethers.getContractFactory("MiddleverseGold");
         const mvgToken = await MVGToken.connect(accounts[0]).deploy();
         await mvgToken.connect(accounts[0]).deployed();
 
-        const MVGDistribution = await ethers.getContractFactory("MDVDistribution");
+        const MVGDistribution = await ethers.getContractFactory("MVGDistribution");
         const mvgDistribution = await MVGDistribution.connect(accounts[1]).deploy(mvgToken.address, 1000);
         await mvgDistribution.connect(accounts[1]).deployed();
 
