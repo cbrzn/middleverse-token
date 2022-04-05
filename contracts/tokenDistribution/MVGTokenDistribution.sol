@@ -64,7 +64,7 @@ contract MVGDistribution is Ownable {
         _token = IERC20(_mvgToken);
 
         tokenToSellInSeedSale = (_token.totalSupply() * 2) / 100; // 2% of totalSupply (10,000,000)
-        tokenToSellInStrategicSale = (_token.totalSupply() * 5) / 100; // 5% of totalSupply (25,000,000)
+        tokenToSellInStrategicSale = (_token.totalSupply() * 5) / 100; // 5% of totalSupply ( ,000,000)
         tokenToSellInPublicSale = (_token.totalSupply() * 9) / 100; // 9% of totalSupply (45,000,000)
 
         saleDetail[uint8(ICOStage.SeedSale)] = VestingSale(
