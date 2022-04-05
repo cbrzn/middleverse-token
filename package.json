@@ -72,6 +72,7 @@
   },
   "dependencies": {
     "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^4.5.0",
     "dotenv": "^16.0.0",
     "ethereum-waffle": "^3.4.0"
   }
