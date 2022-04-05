@@ -63,6 +63,10 @@ module.exports = {
     },
   },
   networks: {
+    hardhat:
+    {
+      allowUnlimitedContractSize: true
+    },
     ropsten: {
       url: process.env.ROPSTEN_HTTP_INFURA || '',
       accounts: {
