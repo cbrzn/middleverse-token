@@ -38,6 +38,7 @@ const argv = require('yargs/yargs')()
 require('@nomiclabs/hardhat-truffle5');
 require('@nomiclabs/hardhat-waffle');
 require('@nomiclabs/hardhat-etherscan');
+require('solidity-coverage')
 
 if (argv.enableGasReport) {
   require('hardhat-gas-reporter');
@@ -69,17 +70,13 @@ module.exports = {
     },
     ropsten: {
       url: process.env.ROPSTEN_HTTP_INFURA || '',
-      accounts: {
-        mnemonic: process.env.MNEMONICS,
-      },
+      accounts: [process.env.PRIVATE_KEY],
       chainId: 3,
     },
     bscTestnet: {
       // url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       url: process.env.BINANCE_HTTP_INFURA,
-      accounts: {
-        mnemonic: process.env.MNEMONICS,
-      },
+      accounts: [process.env.PRIVATE_KEY],
       chainId: 97,
     },
   },
